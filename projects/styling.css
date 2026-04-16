@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Sekuya&display=swap');
+
+header{
+    font-family: "Sekuya", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    color: #3aa5e3;
+    text-align-last: center;
+}
 body{
-    background-color: #763233;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #C9F9FF;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #365290;
+    text-align-last: center;
+
 }
