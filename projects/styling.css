@@ -156,9 +156,8 @@ cursor: pointer;
 }
 
 .sec_section h2{
-    padding: 5px;
-    padding-top: 0;
-    height: 5%;
+    margin: 5px;
+    height: 10%;
     font-size: 2rem;
 }
 
@@ -171,7 +170,7 @@ cursor: pointer;
 }
 
 .imgdiv{
-    height: 45%;
+    height: 40%;
     max-height: fit-content;
     display: flex;
     padding: 5px;
@@ -196,10 +195,10 @@ cursor: pointer;
     border-radius: 5px;
     padding: 5px;
     background-color: #C4FFF9;
-    overflow-y: scroll;
+    overflow-y: auto;
     transition: 0.5s;
     transition-property: box-shadow;
-    box-shadow:0 0 10px#00ffe5 ;
+    box-shadow:0 0 10px#00ffe5;
 }
 
 .stack .textsec:hover{
