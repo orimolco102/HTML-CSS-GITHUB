@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    .grid-sec{
+        padding: 40px;
+        text-align: center;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px , 200px));
+        column-gap: 20px;
+        row-gap: 20px;
+        align-items: center;
+        
+    }
+
+    .grid-item{
+        background-color: #431225;
+        color: white;
+        height: 200px;
+        width: 200px;
+    }
+
+    .red{
+        background-color: red;
+
+    }
+    .blue{
+        background-color: blue;
+
+    }
+    .skyblue{
+        background-color: skyblue;
+
+    }
+    .crimson{
+        background-color: crimson;
+
+    }
+    .green{
+        background-color: green;
+
+    }
+    .magenta{
+        background-color: magenta;
+
+    }
+    .burlywood{
+        background-color: burlywood;
+
+    }
+    .wheat{
+        background-color: wheat;
+
+    }
+</style>
+<body>
+    <section class="grid-sec">
+        <h2>Grid</h2>
+        <p>Grid is prefect for complex layouts</p>
+        <div class="grid-container">
+            <div class="grid-item red">A</div>
+            <div class="grid-item blue">B</div>
+            <div class="grid-item skyblue">C</div>
+            <div class="grid-item crimson">D</div>
+            <div class="grid-item green">E</div>
+            <div class="grid-item magenta">F</div>
+            <div class="grid-item burlywood">G</div>
+            <div class="grid-item wheat">E</div>
+        </div>
+    </section>
+</body>
+</html>
