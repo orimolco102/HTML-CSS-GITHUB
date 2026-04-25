@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Table</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="dashboard-cont">
+      <header class="dashboard-header">
+        <h1>User Management</h1>
+        <button class="btn-prim">Add new user +</button>
+      </header>
+      <div class="table-wrapper">
+        <table class="users-table">
+          <thead>
+            <tr>
+              <th class="checkbox-col">
+                <input type="checkbox" class="custom-cb" />
+              </th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <input type="checkbox" class="checkbox-col" />
+              </td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/men/85.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">boris</span>
+                    <span class="user-email">boris231@gmail.com</span>
+                  </div>
+                </div>
+              </td>
+              <td>Devops Engineer</td>
+              <td><span class="badge b-pending">pending</span></td>
+              <td>0534526539</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/men/73.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Alice Johnson</span>
+                    <span class="user-email">alice.j@company.com</span>
+                  </div>
+                </div>
+              </td>
+              <td>Frontend Developer</td>
+              <td><span class="badge b-active">Active</span></td>
+              <td>0521234567</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/men/23.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Charlie Davis</span>
+                    <span class="user-email">charlie.d@tech.io</span>
+                  </div>
+                </div>
+              </td>
+              <td>UI/UX Designer</td>
+              <td><span class="badge b-inactive">Inactive</span></td>
+              <td>0509876543</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/men/81.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Diana Prince</span>
+                    <span class="user-email">diana.p@justice.org</span>
+                  </div>
+                </div>
+              </td>
+              <td>Project Manager</td>
+              <td><span class="badge b-active">Active</span></td>
+              <td>0541112233</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/men/30.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Ethan Hunt</span>
+                    <span class="user-email">ethan.h@imf.gov</span>
+                  </div>
+                </div>
+              </td>
+              <td>Security Analyst</td>
+              <td><span class="badge b-active">Active</span></td>
+              <td>0583334455</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/men/96.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Fiona Gallagher</span>
+                    <span class="user-email">fiona.g@southside.com</span>
+                  </div>
+                </div>
+              </td>
+              <td>QA Engineer</td>
+              <td><span class="badge b-pending">pending</span></td>
+              <td>0556667788</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/women/30.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">George Costanza</span>
+                    <span class="user-email">george.c@vandelay.com</span>
+                  </div>
+                </div>
+              </td>
+              <td>Product Owner</td>
+              <td><span class="badge b-active">Active</span></td>
+              <td>0539990011</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/men/56.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Hannah Abbott</span>
+                    <span class="user-email">hannah.a@hufflepuff.edu</span>
+                  </div>
+                </div>
+              </td>
+              <td>Backend Developer</td>
+              <td><span class="badge b-active">Active</span></td>
+              <td>0525556677</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/women/18.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Ian Malcolm</span>
+                    <span class="user-email">ian.m@chaos.theory</span>
+                  </div>
+                </div>
+              </td>
+              <td>System Architect</td>
+              <td><span class="badge b-inactive">Inactive</span></td>
+              <td>0547778899</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox-col" /></td>
+              <td>
+                <div class="user-cell">
+                  <img src="https://randomuser.me/api/portraits/women/85.jpg" />
+                  <div class="user-info">
+                    <span class="user-name">Julia Roberts</span>
+                    <span class="user-email">julia.r@cinema.com</span>
+                  </div>
+                </div>
+              </td>
+              <td>HR Specialist</td>
+              <td><span class="badge b-active">Active</span></td>
+              <td>0501239876</td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn">
+                    <span class="btnspan ed">Edit</span>
+                  </button>
+                  <button class="icon-btn">
+                    <span class="btnspan del">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
