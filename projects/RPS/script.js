@@ -43,6 +43,7 @@ function res(ButtonID) {
     score.Losses += 1;
   }
 
+  localStorage.setItem("score",JSON.stringify(score));
 
   alert(`Computer picked: ${computerMove} result: ${result}
     Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}
