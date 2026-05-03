@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1
-      style="font-size: calc(50px, 1.5rem); text-align: center; color: #ff3c38"
-    >
-      Java Script
-    </h1>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header>
 
-    <button id="Rock" onclick="res(this.id)">Rock</button>
-    <button id="Paper" onclick="res(this.id)">Paper</button>
-    <button id="Scissors" onclick="res(this.id)">Scissors</button>
+    <div class="buttoncontainer">
+      <button id="Rock" onclick="res(this.id)">
+        <img src="images/rock-emoji.png" alt="" />
+      </button>
+      <button id="Paper" onclick="res(this.id)">
+        <img src="images/paper-emoji.png" alt="" />
+      </button>
+      <button id="Scissors" onclick="res(this.id)">
+        <img src="images/scissors-emoji.png" alt="" />
+      </button>
+      <button
+        id="clear"
+        onclick="
+          res(this.id);
+          localStorage.removeItem('score');
+          UpdateScore();
+        "
+        style="font-size: 250px; color: red"
+      >
+        ❌
+      </button>
+    </div>
+
+    <div class="statcont">
+      <p class="picks sb"></p>
+      <p class="result sb"></p>
+      <p class="score sb"></p>
+    </div>
   </body>
 </html>
