@@ -58,4 +58,9 @@ function res(ButtonID) {
 
     return computerMove;
   }
+
+
+  function startauto() {
+    setInterval(() => {}, 1000)
+  }
 }
