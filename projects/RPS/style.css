@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+.hide {
+  display: none;
+}
+
 body {
   background-color: #508aa8;
   font-family: Arial, Helvetica, sans-serif;
@@ -35,7 +39,14 @@ button {
 .sb {
   color: #031927;
   font-size: 20px;
-  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 50px;
+}
+
+.sb.picks {
 }
 
 .statcont {
@@ -45,32 +56,42 @@ button {
   font-size: 30px;
 }
 
-.reset {
+.reset,
+.reset:focus {
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(rgb(115, 145, 221), rgb(71, 118, 213));
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(28, 1, 118);
+  transform: translate(0, -3px);
   cursor: pointer;
-  font-weight: 700;
-  transition: all 0.2s;
-  padding: 10px 20px;
-  border-radius: 100px;
-  background: #cfef00;
-  border: 1px solid transparent;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  text-align: center;
-  margin-bottom: 5px;
+  transition: 0.2s;
+  transition-timing-function: linear;
 }
 
-.start-game {
+.reset:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+.start-game,
+.start-game:focus {
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(rgb(115, 145, 221), rgb(71, 118, 213));
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(28, 1, 118);
+  transform: translate(0, -3px);
   cursor: pointer;
-  font-weight: 700;
-  transition: all 0.2s;
-  padding: 10px 20px;
-  border-radius: 100px;
-  background: #cfef00;
-  border: 1px solid transparent;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  text-align: center;
-  margin-bottom: 5px;
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
+
+.start-game:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
 }

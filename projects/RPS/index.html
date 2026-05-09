@@ -13,21 +13,21 @@
     </header>
 
     <div class="buttoncontainer">
-      <button id="Rock" onclick="res(this.id)">
+      <button id="Rock" onclick="res(this.id); showElement()">
         <img src="images/rock-emoji.png" alt="" />
       </button>
-      <button id="Paper" onclick="res(this.id)">
+      <button id="Paper" onclick="res(this.id); showElement()">
         <img src="images/paper-emoji.png" alt="" />
       </button>
-      <button id="Scissors" onclick="res(this.id)">
+      <button id="Scissors" onclick="res(this.id); showElement()">
         <img src="images/scissors-emoji.png" alt="" />
       </button>
     </div>
 
     <div class="statcont">
-      <p class="picks sb"></p>
-      <p class="result sb"></p>
-      <p class="score sb"></p>
+      <p id ='txt' class="picks sb"></p>
+      <p id ='txt' class="result sb"></p>
+      <p id ='txt' class="score sb"></p>
       <div class="reset-game">
         <button
           class="reset"
@@ -36,12 +36,17 @@
             res(this.id);
             localStorage.removeItem('score');
             UpdateScore();
+            hideElement();
+            location.reload();
+            // StopAuto();
           "
         >
           Reset Game
         </button>
-        <button class="start-game">
-          Start Game
+        <button 
+        class="start-game"
+        onclick="StartAuto(); showElement()">
+          Auto Play
         </button>
       </div>
     </div>

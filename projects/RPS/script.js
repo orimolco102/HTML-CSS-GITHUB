@@ -34,33 +34,62 @@ function res(ButtonID) {
 
   document.querySelector(".result").innerHTML = result;
   document.querySelector(".picks").innerHTML =
-    `Computer picked: ${computerMove}. You have picked: ${PlayerChoice}`;
+    `Computer picked: <img src="images/${computerMove}-emoji.png"/>
+     You have picked: <img src="images/${PlayerChoice}-emoji.png"/>`;
 
   UpdateScore();
-
-  function UpdateScore() {
-    document.querySelector(".score").innerHTML =
-      `score: Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`;
-  }
-
-
-  function PickComputerMove() {
-    const randomNumber = Math.random();
-    let computerMove = "";
-
-    if (randomNumber >= 0 && randomNumber < 1 / 3) {
-      computerMove = "Rock";
-    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-      computerMove = "Paper";
-    } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-      computerMove = "Scissors";
-    }
-
-    return computerMove;
-  }
-
-
-  function startauto() {
-    setInterval(() => {}, 1000)
-  }
 }
+
+function UpdateScore() {
+  document.querySelector(".score").innerHTML = `score: Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`;
+}
+
+function hideElement() {
+    const element = document.getElementById('txt');
+    element.style.display = 'none';
+}
+
+function showElement() {
+  const element = document.querySelector('txt');
+  element.style.display = ''
+}
+
+
+function PickComputerMove() {
+  const randomNumber = Math.random();
+  let computerMove = "";
+
+  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+    computerMove = "Rock";
+  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+    computerMove = "Paper";
+  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+    computerMove = "Scissors";
+  }
+
+  return computerMove;
+}
+
+let isAutoPlaying = false;
+let interID;
+
+function StartAuto() {
+
+  if (!isAutoPlaying) {
+    interID = setInterval(() => {
+      const PlayerMove = PickComputerMove();
+      res(PlayerMove)
+    }, 1000);
+    isAutoPlaying = true;
+  }else {
+    clearInterval(interID);
+    isAutoPlaying = false;
+  }
+// isAutoPlaying = true;
+
+}
+
+// function StopAuto() {
+//   clearInterval(interID);
+//   isAutoPlaying = false;
+// }
