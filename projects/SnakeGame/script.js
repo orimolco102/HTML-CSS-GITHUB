@@ -8,24 +8,24 @@ let snakeHead  = snake[0];
 let direction = 'right';
 let isGameOver = false;
 let random;
+let score = 0;
+document.querySelector('.scoreBoard').innerHTML = `Score: ${score}`;
 
 let leftB = [];
 for(let i=20;i<400;i+=20){
 leftB[i] =i;
 }
-console.log(leftB);
 
 let rightB = [];
 for(let i=19;i<400;i+=20){
 rightB[i] =i;
 }
-console.log(rightB);
 
 
 function createBoard() {
     for (let i = 0; i< wi * hi; i++) {
         const div = document.createElement("div");
-        div.innerHTML = i;
+        // div.innerHTML = i;
         board.appendChild(div);
 
     }
@@ -71,18 +71,18 @@ function Move(dir) {
         if(direction === 'down') {
             return;
         }
+        snakeHead -= wi;
         if(!divs[snakeHead]) {
             gameOver()
         }
-         snakeHead -= wi;
     }else if (dir === "down") {
         if(direction === "up") {
             return;
         }
+        snakeHead += wi;
         if(!divs[snakeHead]) {
             gameOver()
         }
-         snakeHead += wi;
     }else if (dir === "left") {
         if(direction === "right"){
             return;
@@ -104,8 +104,14 @@ function Move(dir) {
 
     direction = dir;
     snake.unshift(snakeHead);
+    if(random === snakeHead){
+        sound('snakeEat.mp3');
+        setRandom();
+        scoreBoard();
+    }else{
+        snake.pop();
+    }
 
-    snake.pop();
     snakeColor();
     startAuto();
 
@@ -130,10 +136,28 @@ function setRandom() {
 }
 
 function gameOver() {
-    alert("GAME OVER");
     isGameOver = true;
+    sound('gameOver.mp3');
+    alert("GAME OVER");
+    setTimeout(()=>{},200);
     location.reload();
     return;
+}
+
+function sound(src) {
+    const audio = document.createElement('audio');
+    audio.src = src;
+    audio.volume = 0.5;
+    audio.play();
+}
+
+function scoreBoard() {
+    if(snake.length >= 8) {
+        score+=1;
+    }
+    // console.log(score);
+    document.querySelector('.scoreBoard').innerHTML = `Score: ${score}`;
+    
 }
 
 createBoard();
