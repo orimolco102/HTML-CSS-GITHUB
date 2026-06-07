@@ -1,3 +1,4 @@
+const { response } = require("express");
 const user = require("../model/user");
 
 async function getAllUsers(req, res) {
@@ -49,9 +50,22 @@ async function createUser(req, res) {
     
 }
 
+async function delUser(req, res) {
+    try {
+        const deleteUser = await user.findOneAndDelete(req.params.id);
+        if (!deleteUser) {
+            return response.status(404).json({message: "User not deleted"})
+        }
+        res.status(200).json({message: "User Deleted successfuly", user: delUser})
+    } catch (error) {
+        res.status(400).json({message: "Internal server error", error: error.message})
+    }
+}
+
 module.exports = {
     getAllUsers,
     getUserByID,
     getUserByName,
-    createUser
+    createUser,
+    delUser
 }

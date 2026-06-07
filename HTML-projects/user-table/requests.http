@@ -16,7 +16,11 @@ POST {{baseUrl}}/api/users
 Content-Type: application/json
 
 {
-    "name": "test tes",
+    "name": "test",
     "email": "testing3456@gmail.com",
     "age": 56
 }
+
+###
+
+DELETE {{baseUrl}}/api/users/6a1c83c6c639a897950148f4
