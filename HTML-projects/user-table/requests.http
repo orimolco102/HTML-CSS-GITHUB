@@ -6,7 +6,7 @@ GET {{baseUrl}}/
 GET {{baseUrl}}/api/users
 
 ### get by ID
-GET {{baseUrl}}/api/User/6a1c83c6c639a897950148f4
+GET {{baseUrl}}/api/User/
 
 ### get by name 
 GET {{baseUrl}}/api/MarcusThorne
@@ -22,5 +22,4 @@ Content-Type: application/json
 }
 
 ###
-
-DELETE {{baseUrl}}/api/users/6a1c83c6c639a897950148f4
+DELETE {{baseUrl}}/api/users/6a1c83c6c639a897950148f5

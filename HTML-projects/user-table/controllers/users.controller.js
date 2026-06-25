@@ -7,7 +7,7 @@ async function getAllUsers(req, res) {
         res.status(200).json(users);
         console.log(users);
         
-    } catch {
+    } catch (error) {
         res.status(500).json({message: "Internal server error", error: error.message})
     }
 }
@@ -52,7 +52,7 @@ async function createUser(req, res) {
 
 async function delUser(req, res) {
     try {
-        const deleteUser = await user.findOneAndDelete(req.params.id);
+        const deleteUser = await user.findByIdAndDelete(req.params.id);
         if (!deleteUser) {
             return response.status(404).json({message: "User not deleted"})
         }

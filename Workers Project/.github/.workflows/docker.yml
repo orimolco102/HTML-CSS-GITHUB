@@ -2,11 +2,11 @@ name: Build and push docker image
 
 on:
   push:
-    branches: ["main", "master"]
+    branches: [main, master]
 
   jobs:
     build-and-push:
-      runs-on: alpine-latest
+      runs-on: ubuntu-latest
       steps:
         - name: Checkout code
           uses: action/checkout@v4
@@ -22,4 +22,4 @@ on:
           with:
             context: .
             push: true
-            tags: ${{secrets.DOCKERHUB_USERNAME}}/Worker_Project:latest
+            tags: ${{secrets.DOCKERHUB_USERNAME}}/workers-management:latest

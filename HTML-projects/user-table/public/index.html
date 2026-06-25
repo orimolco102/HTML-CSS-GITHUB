@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User management app</title>
+    <link rel="stylesheet" href="css">
+    <script src="js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>User management site</h1>
+            <p>View our database</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number" id="totalUsers">0</div>
+                <div class="lable">Total Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="avgAge">0</div>
+                <div class="lable">Average Age</div>
+            </div>
+        </div>
+
+        <form id="addUserForm">
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email address">
+            <input type="number" id="age" placeholder="Age">
+
+            <button>Add User</button>
+        </form>
+
+        <div class="grid" id="usersGrid">
+
+        </div>
+    </div>
+</body>
+</html>
